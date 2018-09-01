@@ -1,0 +1,22 @@
+name: NoStolenAccount
+version: 1.0.0
+main: com.teampublic.nostolenaccount.Authenticator
+commands:
+  auth:
+    description: Main command for NoStolenAccount
+permissions:
+  nsa.seediff:
+    description: Show current difference.
+    default: op
+  nsa.changediff:
+    description: Changes current difference.
+    default: op
+  nsa.reloadconfig:
+    description: Reloads config
+    default: op
+  nsa.*:
+    description: All permissions.
+    children:
+      nsa.seediff: true
+      nsa.changediff: true
+      nsa.reloadconfig: true
